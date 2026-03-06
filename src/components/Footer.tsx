@@ -23,11 +23,11 @@ export function Footer() {
               contato@sitebarato.com.br
             </a>
             <a
-              href="tel:+5511999999999"
+              href="tel:+5541991741000"
               className="flex items-center gap-3 text-zinc-400 hover:text-[#00ff88] transition-colors"
             >
               <Phone className="w-5 h-5" />
-              (11) 99999-9999
+              (41) 99174-1000
             </a>
           </div>
         </div>

@@ -8,11 +8,11 @@ import { SchemaOrg } from "@/components/SchemaOrg";
 export const metadata: Metadata = {
   title: "Site Barato — O Site Mais Barato do Brasil | A partir de R$ 300 à vista",
   description:
-    "Site profissional sem enrolação. Para pequenos negócios e MEIs. Entrega em até 2 dias após coleta das informações. Pagamento único a partir de R$ 300. 7 dias de garantia.",
+    "Para quem não pode pagar R$ 3 mil em agência. Site profissional em até 2 dias. Pagamento único a partir de R$ 300. 7 dias de garantia.",
   keywords: ["site barato", "criar site", "site profissional", "site para MEI", "site responsivo"],
   openGraph: {
     title: "Site Barato — O Site Mais Barato do Brasil",
-    description: "Site profissional. Pagamento único a partir de R$ 300. Para pequenos negócios e MEIs.",
+    description: "Site profissional em 2 dias. A partir de R$ 300 à vista. Pagamento único, 7 dias de garantia.",
     type: "website",
   },
   robots: "index, follow",

@@ -36,7 +36,7 @@ export function CTASection() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/20 border border-amber-500/40 px-5 py-2.5 text-sm text-amber-400 font-medium mb-6">
             <Clock className="w-4 h-4" />
-            Apenas 12 vagas este mês
+            Últimas vagas deste mês — só 3 restantes
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
             Fale com um especialista

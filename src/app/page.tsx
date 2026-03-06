@@ -12,9 +12,8 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
-import { CountdownTimer } from "@/components/CountdownTimer";
-import { VacancyCounter } from "@/components/VacancyCounter";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { UrgencyBar } from "@/components/UrgencyBar";
 
 export default function Home() {
   return (
@@ -36,16 +35,5 @@ export default function Home() {
       <Footer />
       <ExitIntentPopup />
     </main>
-  );
-}
-
-function UrgencyBar() {
-  return (
-    <section className="bg-amber-500/10 border-y border-amber-500/20 py-3">
-      <div className="mx-auto max-w-7xl px-4 flex flex-wrap justify-center gap-4">
-        <CountdownTimer />
-        <VacancyCounter />
-      </div>
-    </section>
   );
 }

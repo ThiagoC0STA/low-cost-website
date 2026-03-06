@@ -59,6 +59,9 @@ export function PricingSection() {
             <div className="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 border border-[#00ff88]/40 px-5 py-2.5 text-sm text-[#00ff88] font-medium">
               Entrega em até 2 dias após coleta das informações
             </div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-red-500/20 border border-red-500/40 px-5 py-2.5 text-sm text-red-400 font-medium">
+              Só 3 vagas restantes este mês
+            </div>
           </div>
         </div>
 

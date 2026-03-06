@@ -3,15 +3,15 @@ export function SchemaOrg() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Site Barato',
-    description: 'Site profissional sem enrolação. Para pequenos negócios e MEIs. Entrega em até 2 dias após coleta das informações. Pagamento único a partir de R$ 300.',
+    description: 'Para quem não pode pagar R$ 3 mil em agência. Site profissional em até 2 dias. Pagamento único a partir de R$ 300.',
     url: 'https://sitebarato.com.br',
-    telephone: '+55-11-99999-9999',
+    telephone: '+55-41-99174-1000',
     email: 'contato@sitebarato.com.br',
     priceRange: 'R$300 - R$850',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'BR',
-      addressRegion: 'SP',
+      addressRegion: 'PR',
     },
     aggregateRating: {
       '@type': 'AggregateRating',

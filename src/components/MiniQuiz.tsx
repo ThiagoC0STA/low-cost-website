@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5511999999999';
+const WHATSAPP_NUMBER = '5541991741000';
 
 const QUESTIONS = [
   {

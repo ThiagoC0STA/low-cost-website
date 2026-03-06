@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const WHATSAPP_NUMBER = '5511999999999';
+const WHATSAPP_NUMBER = '5541991741000';
 const MESSAGE = 'Olá! Quero saber mais sobre o site profissional.';
 
 export function WhatsAppButton() {

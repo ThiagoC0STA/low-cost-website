@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5511999999999';
+const WHATSAPP_NUMBER = '5541991741000';
 const STORAGE_KEY = 'sitebarato_exit_seen';
 const MESSAGE = 'Olá! Vi a oferta de R$ 50 de desconto. Quero aproveitar!';
 

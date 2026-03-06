@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight, Loader2 } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5511999999999';
+const WHATSAPP_NUMBER = '5541991741000';
 
 const BUSINESS_OPTIONS = [
   { value: 'Clínica / Consultório / Saúde', label: 'Clínica / Consultório / Saúde' },
