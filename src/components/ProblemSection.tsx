@@ -40,12 +40,12 @@ export function ProblemSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="problema" className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden">
+    <section ref={sectionRef} id="problema" className="py-16 sm:py-24 lg:py-32 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-50" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4">
             Seu negócio está <span className="text-red-400">invisível</span> na internet?
           </h2>
           <p className="text-xl text-zinc-400">

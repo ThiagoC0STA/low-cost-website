@@ -40,37 +40,37 @@ export function PricingSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="pricing" className="py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
+    <section ref={sectionRef} id="pricing" className="py-16 sm:py-24 lg:py-32 bg-[#030303] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4">
             Preço que não machuca o bolso
           </h2>
-          <p className="text-xl text-zinc-400 mb-6">
+          <p className="text-base sm:text-xl text-zinc-400 mb-4 sm:mb-6">
             Sites convencionais: <s className="text-red-400">R$ 2.500 a R$ 8.000</s>. Aqui você paga uma vez e o site é seu.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/20 border border-amber-500/30 px-5 py-2.5 text-sm text-amber-400 font-medium">
-              <Sparkles className="w-4 h-4" />
+          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3">
+            <div className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500/20 border border-amber-500/30 px-4 py-2 text-sm text-amber-400 font-medium">
+              <Sparkles className="w-4 h-4 shrink-0" />
               Pagamento único · Sem mensalidade
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/20 border border-[#00ff88]/40 px-5 py-2.5 text-sm text-[#00ff88] font-medium">
+            <div className="inline-flex items-center justify-center gap-2 rounded-full bg-[#00ff88]/20 border border-[#00ff88]/40 px-4 py-2 text-sm text-[#00ff88] font-medium">
               Entrega em até 2 dias
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-red-500/20 border border-red-500/40 px-5 py-2.5 text-sm text-red-400 font-medium">
-              Só 3 vagas restantes este mês
+            <div className="inline-flex items-center justify-center gap-2 rounded-full bg-red-500/20 border border-red-500/40 px-4 py-2 text-sm text-red-400 font-medium">
+              Só 3 vagas restantes
             </div>
           </div>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-3xl border-2 p-8 transition-all duration-300 ${
-                plan.highlighted ? 'border-[#00ff88] bg-[#00ff88]/5 md:scale-105 z-10' : 'border-zinc-800 bg-zinc-900/30 hover:border-zinc-600'
+              className={`relative rounded-2xl sm:rounded-3xl border-2 p-6 sm:p-8 transition-all duration-300 ${
+                plan.highlighted ? 'border-[#00ff88] bg-[#00ff88]/10 md:bg-[#00ff88]/5 md:scale-105 z-10 ring-2 ring-[#00ff88]/30 sm:ring-0' : 'border-zinc-800 bg-zinc-900/30 hover:border-zinc-600'
               }`}
             >
               {plan.highlighted && (
@@ -78,15 +78,15 @@ export function PricingSection() {
                   <span className="rounded-full bg-[#00ff88] px-4 py-1.5 text-sm font-bold text-black">Mais popular</span>
                 </div>
               )}
-              <div className="mb-6">
-                <h3 className="font-display font-bold text-xl text-white">{plan.name}</h3>
+              <div className="mb-4 sm:mb-6">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-white">{plan.name}</h3>
                 <p className="text-sm text-zinc-500">{plan.description}</p>
               </div>
-              <div className="mb-8">
-                <span className="text-5xl font-display font-bold text-white">R$ {plan.price.toLocaleString('pt-BR')}</span>
+              <div className="mb-6 sm:mb-8">
+                <span className="text-4xl sm:text-5xl font-display font-bold text-white">R$ {plan.price.toLocaleString('pt-BR')}</span>
                 <span className="text-zinc-500"> à vista</span>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-[#00ff88] shrink-0" />

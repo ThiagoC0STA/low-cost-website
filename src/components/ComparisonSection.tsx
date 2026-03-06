@@ -36,12 +36,12 @@ export function ComparisonSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 sm:py-40 bg-[#080808] relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 xl:py-40 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-20">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Nós vs. mercado tradicional
           </h2>
           <p className="text-xl text-zinc-400">Mesmo resultado, fração do preço.</p>

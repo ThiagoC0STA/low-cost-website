@@ -37,16 +37,16 @@ export function TestimonialsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="exemplos" className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden">
+    <section ref={sectionRef} id="exemplos" className="py-16 sm:py-24 lg:py-32 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm text-white mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white mb-4 sm:mb-6">
             <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
             <span>4,8/5 em mais de 200 avaliações</span>
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4">
             Mais de <AnimatedCounter end={847} className="text-[#00ff88]" /> negócios já confiam
           </h2>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
@@ -54,9 +54,9 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {testimonials.map((t) => (
-            <div key={t.name} className="rounded-3xl border border-zinc-800 bg-zinc-900/50 p-8 backdrop-blur-sm hover:border-[#00ff88]/30 transition-colors duration-300">
+            <div key={t.name} className="rounded-2xl sm:rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8 backdrop-blur-sm hover:border-[#00ff88]/30 transition-colors duration-300">
               <Quote className="w-12 h-12 text-[#00ff88]/40 mb-4" />
               <p className="text-zinc-300 leading-relaxed mb-6">&ldquo;{t.content}&rdquo;</p>
               <div className="flex gap-1 mb-4">

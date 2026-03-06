@@ -28,42 +28,42 @@ export function CTASection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="contato" className="py-32 sm:py-40 bg-[#080808] relative overflow-hidden">
+    <section ref={sectionRef} id="contato" className="py-20 sm:py-32 lg:py-40 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="absolute bottom-0 left-1/2 w-[800px] h-[400px] -translate-x-1/2 translate-y-1/2 rounded-full bg-[#00ff88]/15 blur-[120px]" />
 
       <div ref={contentRef} className="relative mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/20 border border-amber-500/40 px-5 py-2.5 text-sm text-amber-400 font-medium mb-6">
-            <Clock className="w-4 h-4" />
+        <div className="text-center mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/20 border border-amber-500/40 px-4 py-2 text-sm text-amber-400 font-medium mb-4 sm:mb-6">
+            <Clock className="w-4 h-4 shrink-0" />
             Últimas vagas deste mês
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Fale com um especialista
           </h2>
-          <p className="text-xl text-zinc-400">
-            3 passos rápidos e você já está no WhatsApp com a gente.
+          <p className="text-base sm:text-xl text-zinc-400">
+            3 passos rápidos e você já está no WhatsApp.
           </p>
         </div>
 
-        <div className="rounded-3xl border border-zinc-700 bg-zinc-900/80 p-6 lg:p-8 backdrop-blur-sm">
+        <div className="rounded-2xl sm:rounded-3xl border border-zinc-700 bg-zinc-900/80 p-5 sm:p-6 lg:p-8 backdrop-blur-sm">
           <LeadForm />
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-6 justify-center text-sm text-zinc-500">
-          <span className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-[#00ff88]" />
+        <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-6 justify-center text-sm text-zinc-500 text-center sm:text-left">
+          <span className="flex items-center justify-center sm:justify-start gap-2">
+            <Shield className="w-4 h-4 text-[#00ff88] shrink-0" />
             7 dias de garantia
           </span>
-          <span className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-[#00ff88]" />
-            Entrega em até 2 dias após coleta
+          <span className="flex items-center justify-center sm:justify-start gap-2">
+            <Clock className="w-4 h-4 text-[#00ff88] shrink-0" />
+            Entrega em 2 dias
           </span>
-          <span>Sem mensalidade</span>
-          <span>Pagamento seguro</span>
+          <span className="flex justify-center sm:justify-start">Sem mensalidade</span>
+          <span className="flex justify-center sm:justify-start">Pagamento seguro</span>
         </div>
 
-        <p className="mt-6 text-center">
+        <p className="mt-4 sm:mt-6 text-center">
           <Link href="#pricing" className="text-zinc-500 hover:text-white text-sm">
             Ou ver planos novamente
           </Link>

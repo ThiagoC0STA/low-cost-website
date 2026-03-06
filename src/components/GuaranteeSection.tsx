@@ -30,13 +30,13 @@ export function GuaranteeSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-[#030303] relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-[#030303] relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-[#00ff88]/10 via-transparent to-[#00ff88]/10" />
       <div ref={ref} className="relative mx-auto max-w-4xl px-4">
-        <div className="flex flex-col sm:flex-row items-center gap-6 rounded-3xl border-2 border-[#00ff88]/30 bg-[#00ff88]/5 p-8 sm:p-10 backdrop-blur-sm">
+        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 rounded-2xl sm:rounded-3xl border-2 border-[#00ff88]/30 bg-[#00ff88]/5 p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
           <ShieldCheck className="w-16 h-16 text-[#00ff88] shrink-0" />
           <div className="text-center sm:text-left">
-            <h3 className="font-display font-bold text-2xl text-white">7 dias de garantia incondicional</h3>
+            <h3 className="font-display font-bold text-xl sm:text-2xl text-white">7 dias de garantia incondicional</h3>
             <p className="text-zinc-400 mt-2 text-lg">
               Se não gostar, devolvemos 100%. Sem perguntas, sem burocracia. Você fecha tranquilo. Entrega em até 2 dias após nos enviar textos, fotos e logo.
             </p>

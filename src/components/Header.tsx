@@ -76,25 +76,29 @@ export function Header() {
           <motion.nav
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-            className="md:hidden py-4 space-y-2"
+            className="md:hidden border-t border-white/10"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block py-2 text-zinc-400 hover:text-white"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Link
-              href="#contato"
-              className="block mt-4 rounded-xl bg-[#00ff88] px-5 py-3 text-center font-semibold text-black"
-              onClick={() => setMobileOpen(false)}
-            >
-              Começar agora
-            </Link>
+            <div className="py-4 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block py-3.5 px-4 rounded-lg text-zinc-400 hover:text-white hover:bg-white/5 text-base font-medium"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-4 px-4">
+                <Link
+                  href="#contato"
+                  className="block w-full rounded-xl bg-[#00ff88] px-5 py-4 text-center font-semibold text-black hover:bg-white transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Começar agora
+                </Link>
+              </div>
+            </div>
           </motion.nav>
         )}
       </div>

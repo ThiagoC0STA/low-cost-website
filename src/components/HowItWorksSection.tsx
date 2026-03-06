@@ -36,12 +36,12 @@ export function HowItWorksSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 sm:py-28 bg-[#080808] relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-20 lg:py-28 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3">
             Como funciona
           </h2>
           <p className="text-lg text-zinc-400">3 passos e seu site está no ar.</p>

@@ -60,12 +60,12 @@ export function FAQSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 sm:py-40 bg-[#030303] relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 xl:py-40 bg-[#030303] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div ref={headingRef} className="text-center mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
+        <div ref={headingRef} className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Perguntas frequentes
           </h2>
           <p className="text-xl text-zinc-400">As dúvidas que todo mundo tem antes de fechar.</p>
@@ -80,12 +80,12 @@ export function FAQSection() {
               className="rounded-2xl border border-zinc-800 bg-zinc-900/30 overflow-hidden backdrop-blur-sm hover:border-zinc-700 transition-colors"
             >
               <Accordion.Header>
-                <Accordion.Trigger className="flex w-full items-center justify-between px-6 py-5 text-left font-medium text-white hover:bg-zinc-800/50 transition-colors group data-[state=open]:bg-zinc-800/50">
+                <Accordion.Trigger className="flex w-full items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left font-medium text-white hover:bg-zinc-800/50 transition-colors group data-[state=open]:bg-zinc-800/50 text-sm sm:text-base">
                   {faq.question}
                   <ChevronDown className="w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Accordion.Trigger>
               </Accordion.Header>
-              <Accordion.Content className="px-6 pb-5 pt-0 overflow-hidden">
+              <Accordion.Content className="px-4 sm:px-6 pb-4 sm:pb-5 pt-0 overflow-hidden">
                 <p className="text-zinc-400 leading-relaxed">{faq.answer}</p>
               </Accordion.Content>
             </Accordion.Item>

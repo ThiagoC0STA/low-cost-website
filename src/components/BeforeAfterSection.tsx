@@ -18,12 +18,12 @@ const examples = [
 
 export function BeforeAfterSection() {
   return (
-    <section className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-[#080808] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Antes e depois
           </h2>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ export function BeforeAfterSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {examples.map((ex) => (
             <div key={ex.title} className="space-y-4">
               <h3 className="font-display font-semibold text-xl text-white">{ex.title}</h3>

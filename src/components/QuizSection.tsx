@@ -26,12 +26,12 @@ export function QuizSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 sm:py-32 bg-[#030303] relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 sm:py-24 lg:py-32 bg-[#030303] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <div ref={contentRef} className="text-center mb-10">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
+        <div ref={contentRef} className="text-center mb-6 sm:mb-10">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3">
             Qual plano combina com você?
           </h2>
           <p className="text-zinc-400">2 perguntas e indicamos o ideal.</p>

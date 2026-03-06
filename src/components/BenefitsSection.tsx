@@ -37,12 +37,12 @@ export function BenefitsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="beneficios" className="py-24 sm:py-32 bg-[#030303] relative">
+    <section ref={sectionRef} id="beneficios" className="py-16 sm:py-24 lg:py-32 bg-[#030303] relative">
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div ref={headingRef} className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <div ref={headingRef} className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4">
             O que você ganha
           </h2>
           <p className="text-xl text-zinc-400">
@@ -51,7 +51,7 @@ export function BenefitsSection() {
         </div>
 
         {/* Stats row - fills the gap, adds social proof */}
-        <div className="flex flex-wrap justify-center gap-8 lg:gap-16 mb-12 lg:mb-16">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-16 mb-8 sm:mb-12 lg:mb-16">
           <div className="text-center">
             <div className="font-display text-3xl sm:text-4xl font-bold text-[#00ff88]">2 dias</div>
             <div className="text-sm text-zinc-500 mt-1">após coleta das infos</div>

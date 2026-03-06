@@ -2,9 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowRight, Check, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Check, Shield } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { MagneticButton } from './MagneticButton';
 
 export function Hero() {
@@ -53,59 +52,60 @@ export function Hero() {
     <section ref={containerRef} className="relative min-h-screen overflow-hidden gradient-mesh">
       <div className="noise-overlay" />
 
-      {/* Giant background price */}
-      <div ref={priceRef} className="absolute right-[-5%] top-1/2 -translate-y-1/2 select-none pointer-events-none">
+      {/* Giant background price - hidden on mobile */}
+      <div ref={priceRef} className="absolute right-[-5%] top-1/2 -translate-y-1/2 select-none pointer-events-none hidden sm:block">
         <span className="font-display text-[clamp(120px,25vw,280px)] font-extrabold leading-none text-[#00ff88]/8 tracking-tighter">
           R$300
         </span>
       </div>
 
-      {/* Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-[#00ff88]/15 blur-[100px]" />
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-[#00d26a]/10 blur-[120px]" />
+      {/* Warm orbs - more balanced glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[min(400px,80vw)] h-64 rounded-full bg-[#00ff88]/12 blur-[80px]" />
+      <div className="absolute bottom-1/4 right-0 w-72 h-72 rounded-full bg-[#00d26a]/8 blur-[100px]" />
+      <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-36 lg:pb-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 pt-32 pb-24 lg:pt-40 lg:pb-28">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/30 px-4 py-2 text-sm text-[#00ff88] font-medium mb-6">
-              <Zap className="w-4 h-4" />
+            {/* Badge - refined pill */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-sm px-4 py-2 text-sm font-medium text-zinc-300 mb-8">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00ff88] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00ff88]" />
+              </span>
               O menor preço do Brasil
             </div>
 
-            <div ref={headlineRef} className="overflow-hidden mb-6">
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-[1.05] text-white">
+            <div ref={headlineRef} className="overflow-hidden mb-8">
+              <h1 className="font-display text-[2.5rem] leading-[1.1] sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white">
                 <span className="word inline-block">Site</span>{' '}
-                <span className="word inline-block text-[#00ff88]">profissional</span>{' '}
+                <span className="word inline-block bg-gradient-to-r from-[#00ff88] to-[#00d26a] bg-clip-text text-transparent">profissional</span>{' '}
                 <span className="word inline-block">sem</span>{' '}
                 <span className="word inline-block">enrolação</span>
               </h1>
             </div>
 
-            <p className="subheadline text-lg sm:text-xl text-zinc-400 max-w-xl mb-8 mx-auto lg:mx-0">
+            <p className="subheadline text-base sm:text-lg lg:text-xl text-zinc-400 max-w-xl mb-10 mx-auto lg:mx-0 leading-relaxed">
               Para quem não pode pagar R$ 3 mil em agência mas precisa aparecer online.
-              Site profissional em 2 dias. <strong className="text-white">A partir de R$ 300 à vista.</strong>
+              Site profissional em 2 dias.{' '}
+              <span className="text-[#00ff88] font-semibold">A partir de R$ 300 à vista.</span>
             </p>
 
-            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <MagneticButton href="#pricing" as="a">
-                <span className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#00ff88] px-8 py-4 text-lg font-bold text-black transition-all hover:bg-white hover:shadow-[0_0_60px_rgba(0,255,136,0.5)]">
+                <span className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#00ff88] px-8 py-4 text-base sm:text-lg font-bold text-black shadow-[0_4px_24px_rgba(0,255,136,0.35)] transition-all hover:bg-white hover:shadow-[0_8px_32px_rgba(0,255,136,0.45)]">
                   Quero meu site agora
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </MagneticButton>
-              <Link
-                href="#exemplos"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-zinc-600 px-8 py-4 text-lg font-medium text-white transition-all hover:bg-white/5 hover:border-zinc-500"
-              >
-                Ver exemplos
-              </Link>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-6 justify-center lg:justify-start text-sm text-zinc-500">
+            <div className="mt-8 flex flex-wrap gap-4 sm:gap-6 justify-center lg:justify-start">
               {['Sem cartão para começar', 'Respondo em até 2h', '7 dias de garantia'].map((item, i) => (
-                <span key={i} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#00ff88]" />
+                <span key={i} className="flex items-center gap-2 text-sm text-zinc-400">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#00ff88]/15">
+                    <Check className="h-3 w-3 text-[#00ff88]" />
+                  </span>
                   {item}
                 </span>
               ))}
@@ -130,15 +130,15 @@ export function Hero() {
                   />
                 ))}
               </div>
-              <p className="text-sm text-zinc-500">
-                <span className="text-white font-medium">+847</span> negócios já fecharam
+              <p className="text-sm text-zinc-400">
+                <span className="text-white font-semibold">+847</span> negócios já fecharam
               </p>
             </div>
           </div>
 
-          <div ref={imageRef} className="relative lg:pl-8">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#00ff88]/20 to-transparent rounded-3xl blur-2xl" />
+          <div ref={imageRef} className="relative lg:pl-8 mt-10 lg:mt-0">
+            <div className="relative max-w-sm mx-auto lg:max-w-none lg:mx-0">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#00ff88]/20 to-transparent rounded-3xl blur-2xl hidden lg:block" />
               <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-zinc-900/50 shadow-2xl ring-1 ring-white/5">
                 <div className="aspect-[4/3] relative">
                   <Image
@@ -159,7 +159,7 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-5 -left-2 rounded-2xl bg-white px-6 py-4 shadow-xl shadow-black/40 border border-zinc-200">
+              <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:right-auto sm:-left-2 rounded-2xl bg-white px-4 py-3 sm:px-6 sm:py-4 shadow-xl shadow-black/40 border border-zinc-200">
                 <div className="flex items-baseline gap-1">
                   <span className="text-2xl font-display font-bold text-black">R$ 500</span>
                   <span className="text-sm text-zinc-600"> à vista</span>
