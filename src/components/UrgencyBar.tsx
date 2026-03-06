@@ -44,7 +44,7 @@ export function UrgencyBar() {
               </motion.span>
             </AnimatePresence>
           </span>{' '}
-          vagas restantes para entrega esta semana — Garantir a minha
+          vagas restantes para entrega esta semana
         </a>
       </div>
     </section>
